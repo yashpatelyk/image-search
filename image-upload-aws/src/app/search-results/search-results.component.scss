@@ -1,0 +1,26 @@
+:host {
+  & > div {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  .msg {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .image-row {
+    display: flex;
+    max-width: 400px;
+    .image {
+      min-width: 200px;
+      min-height: 200px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .details {
+      margin-left: 20px;
+    }
+  }
+}

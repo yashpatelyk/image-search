@@ -1,0 +1,10 @@
+<app-upload-image></app-upload-image>
+
+<app-search-filters (search)="doSearch($event)"></app-search-filters>
+
+<p class="loading-results" *ngIf="searching">Searching...</p>
+
+<app-search-results
+  [results]="results"
+  (moreResults)="fetchNextPage()"
+></app-search-results>

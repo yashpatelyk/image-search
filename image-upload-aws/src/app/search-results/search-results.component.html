@@ -1,0 +1,21 @@
+<div
+  *ngIf="results?.total?.value"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+>
+  <p class="msg">{{ results?.total?.value }} results match your search.</p>
+  <div *ngFor="let image of results.hits" class="image-row">
+    <div class="image">
+      <img [src]="image._source.imageUrl" alt="Image">
+    </div>
+    <div class="details">
+      <p>{{ image._source.description }}</p>
+      <p>{{ image._source.fileType }}</p>
+      <p>{{ image._source.size }} Bytes</p>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="results?.total?.value === 0" class="msg">No images found!</p>

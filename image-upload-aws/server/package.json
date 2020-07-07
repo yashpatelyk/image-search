@@ -1,0 +1,24 @@
+{
+  "name": "expense_tracker",
+  "version": "0.0.0",
+  "engines": {
+    "node": "10.19.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node index",
+    "start:watch": "nodemon index"
+  },
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.8.0",
+    "aws-sdk": "^2.709.0",
+    "body-parser": "~1.18.2",
+    "express": "~4.15.5",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "mysql": "^2.18.1",
+    "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

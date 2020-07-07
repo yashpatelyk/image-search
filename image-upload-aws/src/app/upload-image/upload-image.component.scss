@@ -1,0 +1,18 @@
+:host {
+  form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  .error {
+    color: red;
+  }
+  .success {
+    color: green;
+  }
+  .msg {
+    text-align: center;
+    font-weight: bold;
+  }
+}

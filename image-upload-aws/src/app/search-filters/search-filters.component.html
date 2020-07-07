@@ -1,0 +1,26 @@
+<form [formGroup]="searchForm" (ngSubmit)="searchClicked()">
+  <div>
+    <label for="fileType">Search by image type: </label>
+    <select id="fileType" formControlName="fileType">
+      <option value=""></option>
+      <option value="png">png</option>
+      <option value="jpg">jpg</option>
+      <option value="jpeg">jpeg</option>
+    </select>
+  </div>
+
+  <div>
+    <div>
+      <input id="description" formControlName="description" placeholder="Search by description"/>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <label for="size">File size: </label>
+      <input id="size" formControlName="size"/>
+    </div>
+  </div>
+
+  <button type="submit">Search</button>
+</form>

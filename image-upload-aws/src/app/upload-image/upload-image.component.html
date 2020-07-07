@@ -1,0 +1,25 @@
+<form [formGroup]="uploadForm" (ngSubmit)="upload()">
+  <div>
+    <label for="image">Image: </label>
+    <input
+      id="image"
+      type="file"
+      accept="image/png, image/jpeg"
+      formControlName="imageUpload"
+      (change)="onFileChange($event)"
+    />
+  </div>
+
+  <div>
+    <label for="description">Description: </label>
+    <input id="description" formControlName="description"/>
+  </div>
+
+  <button type="submit" [disabled]="uploadForm.invalid">Upload</button>
+</form>
+
+<div>
+  <p class="error msg" *ngIf="error">{{ error }}</p>
+  <p class="success msg" *ngIf="successMsg">{{ successMsg }}</p>
+  <p class="msg" *ngIf="loading">Uploading image...</p>
+</div>
